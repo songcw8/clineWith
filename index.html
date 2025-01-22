@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Open Graph Image: Specifies the image to be used when sharing on social media -->
+    <meta property="og:title" content="STUDY IN CAFE" />
+    <meta property="og:discrition" content="집중이 잘 되는 카페를 만나보세요" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1497935586351-b67a49e012bf"
+    />
+    <!-- Favicon: Specifies the icon to be displayed in the browser tab -->
+    <link rel="icon" href="./coffee.png" />
+    <title>STUDY IN CAFE</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding: 20px;
+        font-family: "Noto Serif KR", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+      .cafe-card {
+        margin-bottom: 20px;
+      }
+      .carousel-item img {
+        max-height: 300px;
+        object-fit: cover;
+      }
+      .d-flex {
+        display: flex;
+      }
+      .flex-wrap {
+        flex-wrap: wrap;
+      }
+      .justify-content-center {
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mb-4">스터디 카페</h1>
+
+      <!-- Cafe Card 1 -->
+      <div class="card cafe-card">
+        <div class="card-body">
+          <h5 class="card-title">고요한 카페</h5>
+          <h6 class="card-subtitle mb-2 text-muted">서울, 한국</h6>
+          <p class="card-text">
+            편안한 좌석, 충분한 자연 채광, 무료 Wi-Fi를 갖춘 조용한 카페입니다.
+            조용한 분위기와 맛있는 페이스트리로 유명합니다.
+          </p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              편의 시설: Wi-Fi, 전원 콘센트, 화장실
+            </li>
+            <li class="list-group-item">
+              평점:
+              <span class="badge bg-warning text-dark">4.5/5</span>
+            </li>
+          </ul>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary mt-3"
+            data-bs-toggle="modal"
+            data-bs-target="#cafe1Modal"
+          >
+            더 알아보기
+          </button>
+        </div>
+      </div>
+
+      <!-- Cafe Card 2 with Carousel -->
+      <div class="card cafe-card">
+        <div class="card-body">
+          <h5 class="card-title">스터디 스팟</h5>
+          <h6 class="card-subtitle mb-2 text-muted">부산, 한국</h6>
+          <div id="cafeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846"
+                  class="d-block w-100"
+                  alt="카페 인테리어"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf"
+                  class="d-block w-100"
+                  alt="카페 커피"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1447958272669-9c562446304f"
+                  class="d-block w-100"
+                  alt="카페 외관"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#cafeCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">이전</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#cafeCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">다음</span>
+            </button>
+          </div>
+          <p class="card-text">
+            전용 학습 공간, 개인 부스, 다양한 음료를 제공하는 현대적인
+            카페입니다. 빠른 Wi-Fi와 프린팅 서비스를 제공합니다.
+          </p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              편의 시설: Wi-Fi, 전원 콘센트, 프린팅, 개인 부스
+            </li>
+            <li class="list-group-item">
+              평점:
+              <span class="badge bg-success">4.8/5</span>
+            </li>
+          </ul>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary mt-3"
+            data-bs-toggle="modal"
+            data-bs-target="#cafe2Modal"
+          >
+            더 알아보기
+          </button>
+        </div>
+      </div>
+
+      <!-- Accordion for Additional Information -->
+      <div class="accordion" id="cafeAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              자주 묻는 질문
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#cafeAccordion"
+          >
+            <div class="accordion-body">
+              <p>
+                <strong>Q: 학습 공간을 미리 예약할 수 있나요?</strong><br />
+                A: 네, 일부 카페에서는 온라인 예약 시스템을 제공합니다. 자세한
+                내용은 개별 카페의 웹사이트를 확인하세요.
+              </p>
+              <p>
+                <strong>Q: 멤버십 옵션이 있나요?</strong><br />
+                A: 일부 카페에서는 할인된 가격과 연장된 시간과 같은 혜택이 있는
+                멤버십 프로그램을 제공합니다. 자세한 내용은 카페에 문의하세요.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal 1 -->
+      <div
+        class="modal fade"
+        id="cafe1Modal"
+        tabindex="-1"
+        aria-labelledby="cafe1ModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="cafe1ModalLabel">고요한 카페</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                고요한 카페는 서울에 위치한 조용한 스터디 카페입니다. 편안한
+                좌석, 충분한 자연 채광, 무료 Wi-Fi를 제공합니다. 조용한 분위기와
+                맛있는 페이스트리로 유명합니다.
+              </p>
+              <p>
+                편의 시설: Wi-Fi, 전원 콘센트, 화장실<br />
+                평점: 4.5/5
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                닫기
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 2 -->
+      <div
+        class="modal fade"
+        id="cafe2Modal"
+        tabindex="-1"
+        aria-labelledby="cafe2ModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="cafe2ModalLabel">스터디 스팟</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                스터디 스팟은 부산에 위치한 현대적인 스터디 카페입니다. 전용
+                학습 공간, 개인 부스, 다양한 음료를 제공합니다. 빠른 Wi-Fi와
+                프린팅 서비스를 제공합니다.
+              </p>
+              <p>
+                편의 시설: Wi-Fi, 전원 콘센트, 프린팅, 개인 부스<br />
+                평점: 4.8/5
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                닫기
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Toast -->
+      <div
+        class="toast-container position-fixed bottom-0 end-0 p-3"
+        style="z-index: 11"
+      >
+        <div
+          id="liveToast"
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <strong class="me-auto">알림</strong>
+            <small>방금</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body">새로운 카페 정보가 추가되었습니다!</div>
+        </div>
+      </div>
+
+      <!-- Spinner -->
+      <div
+        id="loadingSpinner"
+        class="spinner-border text-primary"
+        role="status"
+        style="display: none"
+      >
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Show toast on page load
+      window.onload = () => {
+        const toastLiveExample = document.getElementById("liveToast");
+        const toast = new bootstrap.Toast(toastLiveExample);
+        toast.show();
+      };
+
+      // Show spinner on button click (example)
+      const learnMoreButtons = document.querySelectorAll(
+        '[data-bs-toggle="modal"]'
+      );
+      learnMoreButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const spinner = document.getElementById("loadingSpinner");
+          spinner.style.display = "block";
+          // Simulate loading delay
+          setTimeout(() => {
+            spinner.style.display = "none";
+          }, 1000);
+        });
+      });
+    </script>
+  </body>
+</html>
